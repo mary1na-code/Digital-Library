@@ -15,28 +15,33 @@
     <main>
         <!-- Stats bar -->
         <section class="stats-container">
-
             <div class="stats-bar">
-
                 <div class="stat-item">Total Books: <span id="total-books">0</span></div>
-
-                <div class="stat-item">Total Pages: <span id="total-pages">0</span></div>
-
+                <div class="stat-item">Read: <span id="read-count">0</span></div>
+                <div class="stat-item">Unread: <span id="unread-count">0</span></div>
             </div>
-
         </section>
 
         <section class="form-container">
             <h2>Add New Book</h2>
             <form id="new-book-form">
-                <input type="text" id="title" placeholder="Title" required>
+                <div class="form-row">
+                    <input type="text" id="title" placeholder="Title" required>
+                    <button type="button" id="search-online">Search Online</button>
+                </div>
+
                 <input type="text" id="author" placeholder="Author" required>
-                <input type="number" id="no-of-pages" placeholder="Number of Pages" min="1" required>
+                <input type="number" id="no-of-pages" placeholder="Number of Pages" min="1">
 
                 <div class="read-status">
                     <label for="read">Have you read it?</label>
                     <input type="checkbox" id="read">
                 </div>
+
+                <label for="summary">Summary (editable):</label>
+                <textarea id="summary" rows="3" placeholder="Summary (auto-filled from search)"></textarea>
+
+                <input type="hidden" id="cover-id">
 
                 <button type="submit">Add Book</button>
             </form>
@@ -46,8 +51,7 @@
 
         <section class="library-display">
             <h2>Current Books</h2>
-            <div id="library-grid">
-            </div>
+            <div id="library-grid"></div>
         </section>
     </main>
 
