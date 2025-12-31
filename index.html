@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.freepik.com/premium-photo/there-are-many-books-bookshelf-children-s-room-ai-generated_990017-3216.jpg" type="image/x-icon">
+    <title>Digital Library Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Digital Library 📚</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Add New Book</h2>
+            <form id="new-book-form">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="number" id="no-of-pages" placeholder="Number of Pages" min="1" required>
+
+                <div class="read-status">
+                    <label for="read">Have you read it?</label>
+                    <input type="checkbox" id="read">
+                </div>
+
+                <button type="submit">Add Book</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="library-display">
+            <h2>Current Books</h2>
+            <div id="library-grid">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
