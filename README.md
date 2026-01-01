@@ -17,9 +17,14 @@ Built to practice and showcase **JavaScript fundamentals**, **object-oriented pr
 - HTML  
 - CSS  
 - JavaScript (ES6 Classes, localStorage)
+---
+## You can try the live demo here: 
+[Digital Library Demo](https://mary1na-code.github.io/Digital-Library/)
 
-## Future Enhancements  
-- Fetch book covers via Open Library API  
-- Search & sort functionality  
-- Reading statistics dashboard  
-- Dark mode and UI polish
+---
+## Future Enhancements
+
+- [ ] Fetch book covers via Open Library API  
+- [ ] Search & sort functionality  
+- [ ] Reading statistics dashboard  
+- [ ] Dark mode and UI polish  
