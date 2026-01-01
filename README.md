@@ -24,7 +24,7 @@ Built to practice and showcase **JavaScript fundamentals**, **object-oriented pr
 ---
 ## Future Enhancements
 
-- [ ] Fetch book covers via Open Library API  
-- [ ] Search & sort functionality  
-- [ ] Reading statistics dashboard  
+✔ Fetch book covers via Open Library API  
+✔ Search & sort functionality  
+✔ Reading statistics dashboard  
 - [ ] Dark mode and UI polish  
