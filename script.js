@@ -212,22 +212,36 @@ searchBtn.addEventListener('click', async () => {
     alert('Enter a title or author to search online');
     return;
   }
+
   searchBtn.disabled = true;
   searchBtn.textContent = 'Searching...';
-  const result = await LibraryManager.searchApi(q);
-  searchBtn.disabled = false;
-  searchBtn.textContent = 'Search Online';
-  if (!result) {
-    alert('No results found or an error occurred.');
-    return;
+
+  try {
+    const result = await LibraryManager.searchApi(q);
+
+    if (!result) {
+      alert('No results found.');
+      return;
+    }
+
+    // Auto-fill form fields
+    if (result.title) titleInput.value = result.title;
+    if (result.author) authorInput.value = result.author;
+    if (result.pages) noOfPagesInput.value = result.pages;
+    if (result.summary) summaryInput.value = result.summary;
+    if (result.coverId) {
+      coverIdInput.value = result.coverId;
+      coverImg.src = `https://covers.openlibrary.org/b/id/${result.coverId}-L.jpg`;
+    }
+
+  } catch (err) {
+    alert('Error occurred: ' + err.message);
+  } finally {
+    searchBtn.disabled = false;
+    searchBtn.textContent = 'Search Online';
   }
-  // Auto-fill form fields (user can edit before submit)
-  if (result.title) titleInput.value = result.title;
-  if (result.author) authorInput.value = result.author;
-  if (result.pages) noOfPagesInput.value = result.pages;
-  if (result.summary) summaryInput.value = result.summary;
-  if (result.coverId) coverIdInput.value = result.coverId;
 });
+
 
 // Form submit event
 bookForm.addEventListener('submit', (event) => {
