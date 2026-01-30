@@ -9,12 +9,37 @@ body {
     background-color: #f0f0f0;
     color: #333;
     padding: 20px;
+    font-size: 1.4rem;            
+    line-height: 1.6;
+    margin-bottom: 1rem; 
 }
 
 html{
     scroll-behavior: smooth;
     font-size: 60.5%;
 }
+
+/* Main heading */
+h1, h2, h3 {
+    color: #454545;
+}
+
+h1 {
+  font-size: 3.2rem;          
+  font-weight: 700;           
+  line-height: 1.2;
+  margin-bottom: 1rem;        
+  text-align: center;
+}
+
+/* Section heading */
+h2 {
+  font-size: 2.4rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+
 #library-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -31,6 +56,7 @@ html{
     align-items: flex-start;
 }
 
+
 .form-row {
   display: flex;
   gap: 8px;
@@ -42,7 +68,6 @@ html{
   height: 120px;
   object-fit: cover;
   border-radius: 4px;
-  flex-shrink: 0;
   background: #eee;
 }
 
@@ -51,32 +76,14 @@ html{
 }
 
 .summary-snippet {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #555;
   margin-top: 6px;
 }
 
-.duo-input-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-.duo-input {
-  width: 280px;
-  padding: 14px 18px;
-  font-size: 18px;
-  border: 2px solid #58cc02; /* Duolingo green */
-  border-radius: 12px;
-  outline: none;
-  transition: all 0.25s ease;
-  background-color: #fff;
-  font-family: "Nunito", sans-serif;
-  box-shadow: 0 4px 0 #58cc02; /* playful shadow */
-}
 
 /* === INPUTS === */
-/* General input + textarea styling */
+
 input[type="text"],
 input[type="number"],
 textarea {
@@ -85,53 +92,52 @@ textarea {
   margin: 10px 0;
   font-size: 16px;
   font-family: "Nunito", sans-serif;
-  border: 2px solid #58cc02; /* Duolingo green */
+  border: 2px solid grey;
   border-radius: 12px;
   background-color: #fff;
   outline: none;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 0 #58cc02;
+  
 }
 
 /* Placeholder style */
 input::placeholder,
 textarea::placeholder {
   color: #888;
-  font-style: italic;
 }
 
 /* Focus effect */
 input:focus,
 textarea:focus {
-  border-color: #ffc800; /* Duolingo yellow accent */
-  box-shadow: 0 4px 0 #ffc800;
+  border-color: grey; 
+  box-shadow: 0 4px 0 grey;
   transform: scale(1.02);
 }
 
 /* Valid input feedback */
 input:valid {
-  border-color: #58cc02;
-  box-shadow: 0 4px 0 #58cc02;
+  border-color: grey;
+  box-shadow: none;
 }
 
 /* Checkbox styling */
 .read-status input[type="checkbox"] {
-  accent-color: #58cc02; /* modern browsers */
+  accent-color: grey;
   transform: scale(1.2);
   margin-left: 8px;
 }
 
 /* Button styling to match inputs */
 button {
-  padding: 12px 18px;
-  font-size: 16px;
-  border: none;
+  padding: 1rem 1.6rem;
+  font-size: 14px;
+  border: 1px solid grey;
   border-radius: 12px;
-  background-color: #58cc02;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.25s ease, transform 0.2s ease;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito-sans", sans-serif;
+  margin: 1rem;
 }
 
 button:hover {
