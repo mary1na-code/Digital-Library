@@ -55,3 +55,86 @@ html{
   color: #555;
   margin-top: 6px;
 }
+
+.duo-input-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.duo-input {
+  width: 280px;
+  padding: 14px 18px;
+  font-size: 18px;
+  border: 2px solid #58cc02; /* Duolingo green */
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.25s ease;
+  background-color: #fff;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 0 4px 0 #58cc02; /* playful shadow */
+}
+
+/* === INPUTS === */
+/* General input + textarea styling */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  border: 2px solid #58cc02; /* Duolingo green */
+  border-radius: 12px;
+  background-color: #fff;
+  outline: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 0 #58cc02;
+}
+
+/* Placeholder style */
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Focus effect */
+input:focus,
+textarea:focus {
+  border-color: #ffc800; /* Duolingo yellow accent */
+  box-shadow: 0 4px 0 #ffc800;
+  transform: scale(1.02);
+}
+
+/* Valid input feedback */
+input:valid {
+  border-color: #58cc02;
+  box-shadow: 0 4px 0 #58cc02;
+}
+
+/* Checkbox styling */
+.read-status input[type="checkbox"] {
+  accent-color: #58cc02; /* modern browsers */
+  transform: scale(1.2);
+  margin-left: 8px;
+}
+
+/* Button styling to match inputs */
+button {
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #58cc02;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  font-family: "Nunito", sans-serif;
+}
+
+button:hover {
+  background-color: #46a302;
+  transform: scale(1.05);
+}
