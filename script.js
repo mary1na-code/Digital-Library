@@ -280,3 +280,11 @@ bookForm.addEventListener('submit', (event) => {
   summaryInput.value = '';
   coverIdInput.value = '';
 });
+
+// function clearLibrary(){
+//   if (comfirm("Are you sure you want to clear the entire library? This action cannot be undone,"{
+//     LibraryManager.books = [];
+//     LibraryManager.save();
+//     renderLibrary();
+//   }))
+// }

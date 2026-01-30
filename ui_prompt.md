@@ -33,3 +33,37 @@ create object literal, destructure object with class keyword and constrution fun
                     <button class="remove-btn" data-index="0">Remove</button>
                 </div>
             </div>
+
+
+            Project Context: Library Registry Refactor & API Integration
+Current State:
+
+Architecture: The app uses a class-based structure (Book and LibraryManager).
+
+Logic: LibraryManager uses static methods for CRUD operations and localStorage persistence.
+
+Data Handling: The Book constructor uses object destructuring for initialization.
+
+Upcoming Objective: Transition from a manual entry registry to a Search-Driven Discovery Tool using the Open Library API.
+
+Key Features to Implement:
+
+ISBN/Title Search: A new UI search bar to fetch book data remotely.
+
+External Data Fetching: Implementation of an asynchronous fetch service to query the Open Library API.
+
+Deep Destructuring: Extracting nested metadata from the API response (specifically: title, author_name, number_of_pages, cover_i for images, and first_sentence or description for summaries).
+
+Data Normalization: Mapping the "messy" API JSON structure into our clean Book class instances.
+
+UI Enhancements: Transitioning the library grid from text-based cards to a visual "Netflix-style" jacket grid using dynamic cover URLs.
+
+Technical Constraints:
+
+Maintain the Static Method architecture in LibraryManager.
+
+Keep the Single Object Parameter pattern for the Book constructor.
+
+Prioritize Deep Destructuring over manual property assignment to handle nested API fields.
+
+Would you like me to generate the updated HTML structure for the Search Bar so your agent has a place to start?
